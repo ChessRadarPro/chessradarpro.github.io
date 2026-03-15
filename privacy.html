@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO -->
+    <title>Privacy Policy — ChessRadarPro</title>
+    <meta name="description"
+        content="ChessRadarPro privacy policy. Learn what data we collect, how images are processed, and how your information is protected.">
+    <link rel="canonical" href="https://chessradarpro.github.io/privacy.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Privacy Policy — ChessRadarPro">
+    <meta property="og:description" content="ChessRadarPro privacy policy. Learn how your data is handled.">
+    <meta property="og:url" content="https://chessradarpro.github.io/privacy.html">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/icon.png">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- ═══════════ NAVIGATION ═══════════ -->
+    <nav class="nav" role="navigation" aria-label="Main navigation">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo">
+                <img src="assets/logo.png" alt="ChessRadarPro logo" width="32" height="32">
+                <span class="nav-logo-text">ChessRadar<span class="pro">Pro</span></span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html#features">Features</a></li>
+                <li><a href="index.html#how-it-works">How It Works</a></li>
+                <li><a href="index.html#pricing">Pricing</a></li>
+                <li><a href="privacy.html" class="active">Privacy</a></li>
+                <li><a href="support.html">Support</a></li>
+                <li>
+                    <a href="https://chromewebstore.google.com/detail/ekdigifeekadfhonhfhbfjaenllbnfba?utm_source=item-share-cb" target="_blank" rel="noopener" class="nav-cta">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                            <polyline points="7 10 12 15 17 10" />
+                            <line x1="12" y1="15" x2="12" y2="3" />
+                        </svg>
+                        Install Free
+                    </a>
+                </li>
+            </ul>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round">
+                    <line x1="3" y1="6" x2="21" y2="6" />
+                    <line x1="3" y1="12" x2="21" y2="12" />
+                    <line x1="3" y1="18" x2="21" y2="18" />
+                </svg>
+            </button>
+        </div>
+    </nav>
+    <div class="mobile-nav" id="mobile-nav">
+        <a href="index.html#features">Features</a>
+        <a href="index.html#how-it-works">How It Works</a>
+        <a href="index.html#pricing">Pricing</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="support.html">Support</a>
+    </div>
+
+    <main class="page-content">
+        <div class="container">
+            <div class="page-header fade-in">
+                <h1>Privacy Policy</h1>
+                <p class="updated">Last updated: March 11, 2026</p>
+            </div>
+
+            <div class="page-body fade-in">
+                <h2>What ChessRadarPro Does</h2>
+                <p>ChessRadarPro is a Chrome extension that detects chess positions from screenshots of the current
+                    browser tab and provides analysis using a local Stockfish engine. It can optionally use Google
+                    Sign-In for a higher daily scan allowance, paid membership checks, and local scan history.</p>
+
+                <h2>Data We Collect</h2>
+                <ul>
+                    <li><strong>Tab Screenshots (transient, sent to our server):</strong> When you click "Scan Position"
+                        and select a board area, the extension captures a screenshot of the visible tab, crops it to
+                        your selection, and sends the cropped image via HTTPS to our position-detection server hosted on
+                        Modal.com. The server processes the image in memory, returns a chess position (FEN string), and
+                        discards the image immediately. No full-page screenshot is uploaded — only the rectangular area
+                        you select.</li>
+                    <li><strong>Google Account Info (optional, mostly local):</strong> If you choose to sign in with
+                        Google, we store your name, email address, and profile photo URL locally in your browser's
+                        extension storage. This data is used to display your account info, apply the signed-in scan
+                        allowance, and confirm whether your signed-in account has premium access.</li>
+                    <li><strong>Scan History (optional, local only):</strong> For signed-in users, we store up to 50
+                        recent scan results (FEN strings and board orientation) in your browser's local extension
+                        storage. This data stays entirely on your browser.</li>
+                    <li><strong>Membership and quota checks (server-side):</strong> When you are signed in, the
+                        extension includes a Google access token with membership checks and scan requests so the server
+                        can validate your signed-in account and enforce scan limits. We do not expose any database keys
+                        to the extension.</li>
+                    <li><strong>Scan Count (local cache + server-side enforcement):</strong> The extension stores a
+                        local copy of your scan count for UI display, while the detection server is the authority that
+                        enforces free-tier limits.</li>
+                    <li><strong>Board Preferences (local only):</strong> Your chosen board style, piece set, and display
+                        preferences are stored locally in your browser.</li>
+                </ul>
+
+                <h2>Data We Do NOT Collect</h2>
+                <ul>
+                    <li>We do not collect browsing history, page content, or any data from websites you visit.</li>
+                    <li>We do not use cookies, tracking pixels, or analytics services.</li>
+                    <li>We do not collect or store passwords, payment information, or other sensitive credentials.</li>
+                    <li>We do not collect data for advertising, profiling, or data brokerage purposes.</li>
+                    <li>We do not store or retain any images on our servers. All image processing is transient.</li>
+                </ul>
+
+                <h2>How Data Is Processed</h2>
+                <ul>
+                    <li><strong>Image Upload for Detection:</strong> When you scan a position, the cropped board image
+                        you selected is sent via HTTPS to our detection server on Modal.com. The server runs an AI model
+                        to identify chess pieces, returns the detected position as a FEN string, and discards the image.
+                        The image is never written to disk or retained beyond the request.</li>
+                    <li><strong>Chess Analysis:</strong> All Stockfish analysis runs locally within the extension using
+                        WebAssembly. No position data is sent externally for engine analysis.</li>
+                    <li><strong>Google Sign-In:</strong> Authentication is handled through Chrome's built-in identity
+                        API and Google's OAuth service. We pass a Google access token to our server so it can validate
+                        signed-in membership and scan requests. We do not store OAuth tokens after the request is
+                        completed. Google account data is not sold, used for advertising, or used to train AI/ML models.
+                    </li>
+                </ul>
+
+                <h2>Third-Party Services</h2>
+                <ul>
+                    <li><strong>Google OAuth:</strong> Used for optional sign-in. Subject to <a
+                            href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy
+                            Policy</a>.</li>
+                    <li><strong>Modal.com:</strong> Hosts our image processing server, membership check endpoint, and
+                        scan quota enforcement. The cropped board image is sent via HTTPS for position detection.
+                        Signed-in scans and membership checks also include a Google access token so the server can
+                        validate the request. Modal processes requests in memory and does not retain images. See <a
+                            href="https://modal.com/privacy" target="_blank" rel="noopener">Modal's Privacy Policy</a>.
+                    </li>
+                </ul>
+
+                <h2>Data Retention</h2>
+                <ul>
+                    <li>Cropped board images: Not retained. Processed in server memory and discarded immediately after
+                        the response is sent.</li>
+                    <li>Google account info: Stored locally until you sign out or uninstall the extension. A Google
+                        access token is sent only with signed-in membership checks and scan requests for validation.
+                    </li>
+                    <li>Scan history: Stored locally (up to 50 items) until cleared by you or until you uninstall the
+                        extension.</li>
+                </ul>
+
+                <h2>Data Sharing</h2>
+                <p>We do not sell, trade, or transfer your data to third parties for advertising or profiling. The data
+                    that leaves your browser is limited to the cropped board image you select and a Google access token
+                    for signed-in validation.</p>
+
+                <h2>Your Rights</h2>
+                <ul>
+                    <li>You can sign out at any time to remove your Google account info from local storage.</li>
+                    <li>You can clear your scan history from the extension's history panel.</li>
+                    <li>Uninstalling the extension removes all locally stored data.</li>
+                </ul>
+
+                <h2>Changes to This Policy</h2>
+                <p>We may update this privacy policy from time to time. Changes will be reflected in the "Last updated"
+                    date above.</p>
+
+                <h2>Contact</h2>
+                <p>For questions about this privacy policy, contact us at <a
+                        href="mailto:realblackfoxweb@gmail.com">realblackfoxweb@gmail.com</a></p>
+            </div>
+        </div>
+    </main>
+
+    <!-- ═══════════ FOOTER ═══════════ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-brand">
+                    <a href="index.html" class="nav-logo">
+                        <img src="assets/logo.png" alt="ChessRadarPro" width="32" height="32">
+                        <span class="nav-logo-text">ChessRadar<span class="pro">Pro</span></span>
+                    </a>
+                    <p>Instant chess position detection and Stockfish analysis — right in your browser.</p>
+                </div>
+                <div class="footer-col">
+                    <h5>Product</h5>
+                    <a href="index.html#features">Features</a>
+                    <a href="index.html#how-it-works">How It Works</a>
+                    <a href="index.html#pricing">Pricing</a>
+                </div>
+                <div class="footer-col">
+                    <h5>Resources</h5>
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="support.html">Support</a>
+                    <a href="mailto:realblackfoxweb@gmail.com">Contact</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>&copy; 2026 ChessRadarPro. All rights reserved.</span>
+                <span><a href="mailto:realblackfoxweb@gmail.com">realblackfoxweb@gmail.com</a></span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO -->
+    <title>ChessRadarPro — Instant Chess Position Detection for Chrome</title>
+    <meta name="description"
+        content="Scan any chess position from your screen — old books, YouTube videos, or Google Images — and get instant Stockfish analysis. Free Chrome extension.">
+    <meta name="keywords"
+        content="chess, chess position detection, chrome extension, stockfish, chess analysis, FEN, PGN, chess scanner, chess AI">
+    <meta name="author" content="ChessRadarPro">
+    <link rel="canonical" href="https://chessradarpro.github.io/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="ChessRadarPro — Instant Chess Position Detection">
+    <meta property="og:description"
+        content="Scan any chess position from your screen and get instant Stockfish analysis. Free Chrome extension.">
+    <meta property="og:image" content="assets/beamer.png">
+    <meta property="og:url" content="https://chessradarpro.github.io/">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ChessRadarPro — Instant Chess Position Detection">
+    <meta name="twitter:description" content="Scan any chess board on your screen. Get instant Stockfish analysis.">
+    <meta name="twitter:image" content="assets/beamer.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/icon.png">
+    <link rel="apple-touch-icon" href="assets/icon.png">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- ═══════════ NAVIGATION ═══════════ -->
+    <nav class="nav" role="navigation" aria-label="Main navigation">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo">
+                <img src="assets/logo.png" alt="ChessRadarPro logo" width="32" height="32">
+                <span class="nav-logo-text">ChessRadar<span class="pro">Pro</span></span>
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#screenshots">See It In Action</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="privacy.html">Privacy</a></li>
+                <li><a href="support.html">Support</a></li>
+                <li>
+                    <a href="https://chromewebstore.google.com/detail/ekdigifeekadfhonhfhbfjaenllbnfba?utm_source=item-share-cb" target="_blank" rel="noopener" class="nav-cta"
+                        id="nav-install-btn">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                            <polyline points="7 10 12 15 17 10" />
+                            <line x1="12" y1="15" x2="12" y2="3" />
+                        </svg>
+                        Install Free
+                    </a>
+                </li>
+            </ul>
+
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round">
+                    <line x1="3" y1="6" x2="21" y2="6" />
+                    <line x1="3" y1="12" x2="21" y2="12" />
+                    <line x1="3" y1="18" x2="21" y2="18" />
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Nav -->
+    <div class="mobile-nav" id="mobile-nav">
+        <a href="#features">Features</a>
+        <a href="#how-it-works">How It Works</a>
+        <a href="#screenshots">See It In Action</a>
+        <a href="#pricing">Pricing</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="support.html">Support</a>
+        <a href="https://chromewebstore.google.com/detail/ekdigifeekadfhonhfhbfjaenllbnfba?utm_source=item-share-cb" target="_blank" rel="noopener" class="btn-primary"
+            style="text-align:center;margin-top:8px">Install Free</a>
+    </div>
+
+    <main>
+        <!-- ═══════════ HERO ═══════════ -->
+        <section class="hero" id="hero">
+            <div class="container">
+                <div class="hero-badge fade-in">
+                    <span class="dot"></span>
+                    Chrome Extension v1.2
+                </div>
+
+                <h1 class="fade-in">
+                    Scan Any Chess Position.<br>
+                    <span class="accent">Analyze Instantly.</span>
+                </h1>
+
+                <p class="hero-sub fade-in">
+                    Just draw a box around any chess board on your screen — old books, YouTube videos, Google Images —
+                    and get full Stockfish analysis in seconds.
+                </p>
+
+                <div class="hero-actions fade-in">
+                    <a href="https://chromewebstore.google.com/detail/ekdigifeekadfhonhfhbfjaenllbnfba?utm_source=item-share-cb" target="_blank" rel="noopener" class="btn-primary"
+                        id="hero-install-btn">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                            <polyline points="7 10 12 15 17 10" />
+                            <line x1="12" y1="15" x2="12" y2="3" />
+                        </svg>
+                        Install for Chrome — Free
+                    </a>
+                    <a href="#how-it-works" class="btn-secondary">
+                        See How It Works
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M6 9l6 6 6-6" />
+                        </svg>
+                    </a>
+                </div>
+
+                <div class="hero-image fade-in">
+                    <img src="assets/screenshot-1.webp" alt="ChessRadarPro scanning a chess position from an old book"
+                        width="900" height="507" loading="eager">
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════ FEATURES ═══════════ -->
+        <section class="section" id="features">
+            <div class="container">
+                <div class="section-label fade-in">Features</div>
+                <h2 class="section-title fade-in">Everything You Need for Chess Analysis</h2>
+                <p class="section-desc fade-in">From instant position detection to deep Stockfish analysis — all running
+                    right in your browser.</p>
+
+                <div class="features-grid">
+                    <!-- 1 -->
+                    <div class="feature-card fade-in">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24">
+                                <circle cx="12" cy="12" r="3" />
+                                <path d="M3 7V5a2 2 0 0 1 2-2h2" />
+                                <path d="M17 3h2a2 2 0 0 1 2 2v2" />
+                                <path d="M21 17v2a2 2 0 0 1-2 2h-2" />
+                                <path d="M7 21H5a2 2 0 0 1-2-2v-2" />
+                            </svg>
+                        </div>
+                        <h3>Instant Scan</h3>
+                        <p>Select any chess board from any website — printed books, screenshots, live streams — and
+                            detect the position in seconds.</p>
+                    </div>
+                    <!-- 2 -->
+                    <div class="feature-card fade-in">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M12 20V10" />
+                                <path d="M18 20V4" />
+                                <path d="M6 20v-4" />
+                            </svg>
+                        </div>
+                        <h3>Stockfish Analysis</h3>
+                        <p>Built-in Stockfish engine runs locally in your browser. See top 3 lines with adjustable
+                            search depth up to d20.</p>
+                    </div>
+                    <!-- 3 -->
+                    <div class="feature-card fade-in">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24">
+                                <rect x="9" y="9" width="13" height="13" rx="2" ry="2" />
+                                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
+                            </svg>
+                        </div>
+                        <h3>Copy FEN & PGN</h3>
+                        <p>One-click copy of FEN string or PGN notation. Paste into Lichess, Chess.com, or any analysis
+                            tool instantly.</p>
+                    </div>
+                    <!-- 4 -->
+                    <div class="feature-card fade-in">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                                <polyline points="15 3 21 3 21 9" />
+                                <line x1="10" y1="14" x2="21" y2="3" />
+                            </svg>
+                        </div>
+                        <h3>Open in Lichess</h3>
+                        <p>Instantly open any scanned position on Lichess for deeper analysis, playing against the
+                            computer, or sharing.</p>
+                    </div>
+                    <!-- 5 -->
+                    <div class="feature-card fade-in">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z" />
+                                <line x1="4" y1="22" x2="4" y2="15" />
+                            </svg>
+                        </div>
+                        <h3>Best Move Arrows</h3>
+                        <p>See the engine's recommended moves drawn directly on the interactive chessboard with
+                            beautiful animated arrows.</p>
+                    </div>
+                    <!-- 6 -->
+                    <div class="feature-card fade-in">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24">
+                                <circle cx="12" cy="12" r="3" />
+                                <path
+                                    d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z" />
+                            </svg>
+                        </div>
+                        <h3>Customizable Board</h3>
+                        <p>Choose from multiple board styles and piece sets. Edit positions directly on the interactive
+                            drag-and-drop board.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════ HOW IT WORKS ═══════════ -->
+        <section class="section how-it-works" id="how-it-works">
+            <div class="container">
+                <div class="section-label fade-in">How It Works</div>
+                <h2 class="section-title fade-in">Four Simple Steps</h2>
+                <p class="section-desc fade-in">From any chess board on your screen to full engine analysis in under 5
+                    seconds.</p>
+
+                <div class="steps">
+                    <div class="step fade-in">
+                        <div class="step-number">1</div>
+                        <h3>Click the Icon</h3>
+                        <p>Open any webpage with a chess position and click the ChessRadarPro icon in your toolbar.</p>
+                    </div>
+                    <div class="step fade-in">
+                        <div class="step-number">2</div>
+                        <h3>Hit "Scan Position"</h3>
+                        <p>Press the scan button. A selection overlay appears on the page.</p>
+                    </div>
+                    <div class="step fade-in">
+                        <div class="step-number">3</div>
+                        <h3>Draw a Rectangle</h3>
+                        <p>Click and drag around the chess board. Release to crop and send for detection.</p>
+                    </div>
+                    <div class="step fade-in">
+                        <div class="step-number">4</div>
+                        <h3>Get Instant Analysis</h3>
+                        <p>The position loads into an interactive board with Stockfish analysis, best move arrows, and
+                            FEN/PGN export.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════ SCREENSHOTS ═══════════ -->
+        <section class="section" id="screenshots">
+            <div class="container">
+                <div class="section-label fade-in">See It In Action</div>
+                <h2 class="section-title fade-in">Works Everywhere Chess Appears</h2>
+                <p class="section-desc fade-in">Old scanned books, Google Image thumbnails, YouTube video frames —
+                    ChessRadarPro handles them all.</p>
+
+                <div class="screenshots-grid">
+                    <div class="screenshot-card fade-in">
+                        <img src="assets/screenshot-1.webp" alt="Scanning a chess position from old book" loading="lazy"
+                            width="400" height="220">
+                        <div class="caption">
+                            <h4>Old Chess Books</h4>
+                            <p>Recognize printed diagrams from century-old scanned pages — like a 1910 Emanuel Lasker
+                                classic on Internet Archive.</p>
+                        </div>
+                    </div>
+                    <div class="screenshot-card fade-in">
+                        <img src="assets/screenshot-2.webp" alt="Scanning a position from Google Images" loading="lazy"
+                            width="400" height="220">
+                        <div class="caption">
+                            <h4>Google Image Thumbnails</h4>
+                            <p>Even the smallest "mate in 5" thumbnails on Google Images are detected accurately. No
+                                need to open full-size.</p>
+                        </div>
+                    </div>
+                    <div class="screenshot-card fade-in">
+                        <img src="assets/screenshot-3.webp" alt="Scanning a board from YouTube" loading="lazy"
+                            width="400" height="220">
+                        <div class="caption">
+                            <h4>YouTube Videos</h4>
+                            <p>Pause the video, scan the board, get engine evaluation. Perfect for live broadcasts and
+                                video lessons.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════ PRICING ═══════════ -->
+        <section class="section" id="pricing" style="background: var(--bg-panel);">
+            <div class="container">
+                <div class="section-label fade-in">Pricing</div>
+                <h2 class="section-title fade-in">Start Free. Upgrade When Ready.</h2>
+                <p class="section-desc fade-in">No credit card required. Get started with generous free limits.</p>
+
+                <div class="pricing-grid">
+                    <!-- Free -->
+                    <div class="pricing-card fade-in">
+                        <div class="pricing-name">Free</div>
+                        <div class="pricing-price">$0</div>
+                        <div class="pricing-alt">Forever free</div>
+                        <ul class="pricing-features">
+                            <li>5 scans/day as guest</li>
+                            <li>20 scans/day with Google sign-in</li>
+                            <li>Full Stockfish analysis</li>
+                            <li>FEN &amp; PGN export</li>
+                            <li>Customizable board &amp; pieces</li>
+                        </ul>
+                        <a href="https://chromewebstore.google.com/detail/ekdigifeekadfhonhfhbfjaenllbnfba?utm_source=item-share-cb" target="_blank" rel="noopener"
+                            class="btn-secondary" style="width:100%;justify-content:center">
+                            Install Free
+                        </a>
+                    </div>
+
+                    <!-- Premium -->
+                    <div class="pricing-card featured fade-in">
+                        <div class="pricing-badge">MOST POPULAR</div>
+                        <div class="pricing-name">Premium</div>
+                        <div class="pricing-price">$6<span>/mo</span></div>
+                        <div class="pricing-alt">or $60/year (save 17%)</div>
+                        <ul class="pricing-features">
+                            <li>Unlimited scans</li>
+                            <li>All free features included</li>
+                            <li>Works on every signed-in device</li>
+                            <li>Priority support</li>
+                            <li>Cancel anytime</li>
+                        </ul>
+                        <a href="https://buymeacoffee.com" target="_blank" rel="noopener" class="btn-primary"
+                            style="width:100%;justify-content:center">
+                            Upgrade to Premium
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════ CTA BANNER ═══════════ -->
+        <section class="cta-banner">
+            <div class="container">
+                <h2 class="fade-in">Ready to Scan Your First Position?</h2>
+                <p class="fade-in">Install ChessRadarPro and start analyzing chess positions in seconds.</p>
+                <a href="https://chromewebstore.google.com/detail/ekdigifeekadfhonhfhbfjaenllbnfba?utm_source=item-share-cb" target="_blank" rel="noopener" class="btn-primary fade-in"
+                    id="cta-install-btn">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="3" />
+                        <path d="M3 7V5a2 2 0 0 1 2-2h2" />
+                        <path d="M17 3h2a2 2 0 0 1 2 2v2" />
+                        <path d="M21 17v2a2 2 0 0 1-2 2h-2" />
+                        <path d="M7 21H5a2 2 0 0 1-2-2v-2" />
+                    </svg>
+                    Install for Chrome — It's Free
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- ═══════════ FOOTER ═══════════ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-brand">
+                    <a href="index.html" class="nav-logo">
+                        <img src="assets/logo.png" alt="ChessRadarPro" width="32" height="32">
+                        <span class="nav-logo-text">ChessRadar<span class="pro">Pro</span></span>
+                    </a>
+                    <p>Instant chess position detection and Stockfish analysis — right in your browser.</p>
+                </div>
+
+                <div class="footer-col">
+                    <h5>Product</h5>
+                    <a href="#features">Features</a>
+                    <a href="#how-it-works">How It Works</a>
+                    <a href="#pricing">Pricing</a>
+                    <a href="https://chromewebstore.google.com/detail/ekdigifeekadfhonhfhbfjaenllbnfba?utm_source=item-share-cb" target="_blank" rel="noopener">Chrome Web Store</a>
+                </div>
+
+                <div class="footer-col">
+                    <h5>Resources</h5>
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="support.html">Support</a>
+                    <a href="mailto:realblackfoxweb@gmail.com">Contact</a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <span>&copy; 2026 ChessRadarPro. All rights reserved.</span>
+                <span><a href="mailto:realblackfoxweb@gmail.com">realblackfoxweb@gmail.com</a></span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
